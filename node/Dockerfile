@@ -1,5 +1,5 @@
 # Download the slim version of node
-FROM node:20-slim
+FROM node:17-slim
 
 # Set the work directory to app folder. 
 # We will be copying our code here
