@@ -13,17 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
-      - name: Check secrets availability
-        run: |
-          if [ -z "${{ secrets.DOCKER_HUB_USER }}" ] || [ -z "${{ secrets.DOCKER_HUB_PASSWORD }}" ]; then
-            echo "One or more required secrets are empty."
-            exit 1
-          else
-            echo "Secrets are present."
-          fi
-
-
+     
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_HUB_USER }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
 
