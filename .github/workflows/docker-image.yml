@@ -14,16 +14,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Log in to Docker Hub
-        run: docker login -u  ${{ secrets.DOCKER_HUB_USER }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
+        run: docker login -u ${{ secrets.DOCKER_HUB_USER }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
 
       - name: Build PHP Docker image
-        run: docker build . -t mahmouddawood/php:$(data+%s) -f php/Dockerfile 
+        run: docker build . -t mahmouddawood/php:$(date +%s) -f php/Dockerfile 
         
       - name: Push PHP Docker image to Docker Hub
-        run: docker push mahmouddawood/php:$(data+%s)
+        run: docker push mahmouddawood/php:$(date +%s)
 
       - name: Build Node.js Docker image
-        run: docker build -t mahmouddawood/node:$(data+%s) -f node/Dockerfile .
+        run: docker build -t mahmouddawood/node:$(date +%s) -f node/Dockerfile .
         
       - name: Push Node.js Docker image to Docker Hub
-        run: docker push mahmouddawood/node:$(data+%s)
+        run: docker push mahmouddawood/node:$(date +%s)
