@@ -17,13 +17,13 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_HUB_USER }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
 
       - name: Build PHP Docker image
-        run: docker build . -t mahmouddawood/php:$(date +%s) -f php/Dockerfile 
+        run: docker build . -t mahmouddawood/php:${{ github.run_number }} -f php/Dockerfile 
         
       - name: Push PHP Docker image to Docker Hub
-        run: docker push mahmouddawood/php:$(date +%s)
+        run: docker push mahmouddawood/php:${{ github.run_number }}
 
       - name: Build Node.js Docker image
-        run: docker build -t mahmouddawood/node:$(date +%s) -f node/Dockerfile .
+        run: docker build -t mahmouddawood/node:${{ github.run_number }} -f node/Dockerfile .
         
       - name: Push Node.js Docker image to Docker Hub
-        run: docker push mahmouddawood/node:$(date +%s)
+        run: docker push mahmouddawood/node:${{ github.run_number }}
