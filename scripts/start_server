@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Print the current working directory
-echo "Current directory: $(pwd)"
-
-# Navigate up one directory to where docker-compose.yml is located
 cd ..
 
-# Verify that docker-compose.yml exists in the new current directory
-if [ -f "docker-compose.yml" ]; then
-    echo "docker-compose.yml found, starting services..."
-    docker-compose up -d
-else
-    echo "Error: docker-compose.yml not found in $(pwd)"
-    exit 1
-fi
+docker-compose up -d
