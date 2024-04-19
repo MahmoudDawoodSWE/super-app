@@ -11,8 +11,11 @@ hooks:
     - location: scripts/start_server
       timeout: 300
       runas: root
+      cwd: /opt/application
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 300
       runas: root
+      cwd: /opt/application
+
 
