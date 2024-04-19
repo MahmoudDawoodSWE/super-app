@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-cd MahmoudDawoodSWE/super-app
+cd ..
 
 docker-compose up -d
