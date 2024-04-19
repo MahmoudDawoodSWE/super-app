@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd MahmoudDawoodSWE/super-app
+cd ..
 docker-compose down
 
