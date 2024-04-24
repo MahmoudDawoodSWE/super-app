@@ -3,7 +3,7 @@ os: linux
 hooks:
 files:
   - source: /
-    destination: /opt
+    destination: /opt/codedeploy-agent
 BeforeInstall:
   - location: scripts/install_dependencies
     timeout: 300
