@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Update your packages
+echo "Updating packages..."
+sudo yum update -y
+
+# Install Docker from Amazon's repository
+echo "Installing Docker..."
+sudo yum install docker -y
+
+# Start the Docker service
+echo "Starting Docker..."
+sudo systemctl start docker
+
+# Enable Docker to start on boot
+echo "Enabling Docker to start on boot..."
+sudo systemctl enable docker
+
+# Install Docker Compose
+echo "Installing Docker Compose..."
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Echo completion messages
+echo "Docker and Docker Compose installed and running."
