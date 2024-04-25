@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: docker-compose.yml
-    destination: /opt/myapp/
+    destination: /opt/
   - source: scripts
-    destination: /opt/myapp/
+    destination: /opt/
   - source: php
-    destination: /opt/myapp/
+    destination: /opt/
   - source: node
-    destination: /opt/myapp/
+    destination: /opt/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
