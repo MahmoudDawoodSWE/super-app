@@ -4,7 +4,7 @@ files:
   - source: scripts/
     destination: /home/ubuntu/scripts/
   - source: docker-compose.yml
-    destination: /home/ubuntu/docker-compose.yml
+    destination: /home/ubuntu/
   - source: php/
     destination: /home/ubuntuopt/php/
   - source: node/
