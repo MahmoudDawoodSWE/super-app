@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: scripts/
-    destination: /home/ubuntu/scripts/
-  - source: docker-compose.yml
+    destination: /opt/scripts/
+  - source: dockerCom.yml
     destination: /home/ubuntu/
   - source: php/
-    destination: /home/ubuntuopt/php/
+    destination: /opt/php/
   - source: node/
-    destination: /home/ubuntu/node/
+    destination: /opt/node/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
