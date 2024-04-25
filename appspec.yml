@@ -5,6 +5,10 @@ files:
     destination: /opt/docker-compose.yml
   - source: scripts/
     destination: /opt/scripts/
+  - source: php/
+    destination: /opt/php/
+  - source: node/
+    destination: /opt/node/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
