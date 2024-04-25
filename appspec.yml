@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: docker-compose.yml
-    destination: /opt/codedeploy-agent
+    destination: /opt/myapp
   - source: scripts
-    destination: /opt/codedeploy-agent
+    destination: /opt/myapp
   - source: php
-    destination: /opt/codedeploy-agent
+    destination: /opt/myapp
   - source: node
-    destination: /opt/codedeploy-agent
+    destination: /opt/myapp
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
