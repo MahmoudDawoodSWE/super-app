@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: docker-compose.yml
-    destination: /opt/docker-compose.yml
   - source: scripts/
     destination: /opt/scripts/
+  - source: docker-compose.yml
+    destination: /opt/docker-compose.yml
   - source: php/
     destination: /opt/php/
   - source: node/
